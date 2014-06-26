@@ -1,0 +1,12 @@
+---
+layout: default
+title: myblog
+---
+
+<h2>{{ page.title }}</h2>
+<p>new articles</p>
+<ul>
+	{% for post in site.posts %}
+		<li>{{ post.title }}</li>
+	{% endfor %}
+</ul>
