@@ -3,8 +3,29 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<title>{{ page.title }}</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
 	</head>
 	<body>
-		{{ content}}
+	<!-- HEADER -->
+	<div id="header_wrap" class="outer">
+	<header class="inner">
+		<a id="forkme_banner" href="https://github.com/mycmessia">View on GitHub</a>
+		<h1 id="project_title">MeiYuchen&#39;s blog on Git</h1>
+		<h2 id="project_tagline">A blog about MeiYuchen&#39;s skill and hobbies.</h2>
+	</header>
+	</div>
+    	<!-- MAIN CONTENT -->
+    	<div id="main_content_wrap" class="outer">
+      	<section id="main_content" class="inner">
+		<p>I am a coder in China, I 'm skilled in C language, JavaScript, HTML, CSS, cocos2d-x...</p>
+	{{content}}
+      	</section>
+	</div>
+	<!-- FOOTER  -->
+	<div id="footer_wrap" class="outer">
+	<footer class="inner">
+		<p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+	</footer>
+	</div>
 	</body>
 </html>
