@@ -28,6 +28,9 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <p>I am a coder in China, I 'm skilled in C language, JavaScript, HTML, CSS, cocos2d-x...</p>
+	{% for post in site.posts %}
+	<p>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></p>
+	{% endfor %}
       </section>
     </div>
 
