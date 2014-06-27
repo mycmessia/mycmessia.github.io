@@ -1,0 +1,19 @@
+---
+layout: default
+titie: First Article
+---
+
+<h2>{{ page.title }}</h2>
+<p>This is my first article, I want to introduce how to build a blog by git.</p>
+<p>
+	1. You can see <a href="https://pages.github.com">pages.github.com<a> and you will get
+	a blog repository.
+</p>
+<p>
+	2. You can see the blog write by 阮一峰 and what I want to say is you need not to
+	create a new branch, you can just use the master branch.
+</p>
+<p>
+	3. The last but not least is you may need to learn jekyll's syntax, you mustn't name
+	a folder or a file at will.
+</p>
