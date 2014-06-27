@@ -1,10 +1,9 @@
 ---
 layout: default
-title: myblog
+title: New articles
 ---
 
 <h2>{{ page.title }}</h2>
-<p>new articles</p>
 <ul>
 	{% for post in site.posts %}
 		<li><a href="{{ post.url }}">{{ post.title }}</a></li>
