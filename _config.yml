@@ -1,1 +1,3 @@
 baseurl: mycmessia.github.io/
+paginate: 5
+paginate_path: "blogs/page:num"
