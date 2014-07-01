@@ -26,7 +26,7 @@ window.onload = function () {
 	var aDiv = oDiv.getElementsByTagName("div");
 	for (var i = 0; i < aDiv.length; i++)
 	{
-		if (aDiv.getAttribute("type") == "content_list" && aDiv[i].className != curTag)
+		if (aDiv[i].getAttribute("type") == "content_list" && aDiv[i].className != curTag)
 			aDiv[i].style.display = "none";
 	}
 };
