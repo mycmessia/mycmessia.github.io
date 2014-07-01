@@ -5,7 +5,7 @@ title: category
 
 {% for category in site.categories %}
 <div type="content_list" class="{{ category | first }}">
-	<h2>{{ category | first }} ({{ category | last | size }})</h2>
+	<h2>{{ category | first }}</h2>
     	{% for post in category.last %}
         	<h4>
 			<a href="{{ post.url }}">{{ post.title }}</a>
