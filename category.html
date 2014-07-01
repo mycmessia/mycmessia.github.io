@@ -2,7 +2,17 @@
 layout: default
 title: category
 ---
-
+{% for category in site.categories %}
+<div type="content_list" class="{{ category | first }}">
+	<h2>{{ category | first }}</h2>
+	</span>{{ category | last | size }}</span>
+	<ul class="arc-list">
+    	{% for post in category.last %}
+        	<li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+    	{% endfor %}
+	</ul>
+</div>
+{% endfor %}
 <script>
 function getRequest() 
 {
@@ -22,22 +32,10 @@ var curTag = request["cat"];
 	
 var oDiv = document.getElementById("main_content");
 var aDiv = oDiv.getElementsByTagName("div");
+console.log(aDiv.length);
 for (var i = 0; i < aDiv.length; i++)
 {
 	if (aDiv[i].getAttribute("type") == "content_list" && aDiv[i].className != curTag)
 		aDiv[i].style.display = "none";
 }
-
-
 </script>
-{% for category in site.categories %}
-<div type="content_list" class="{{ category | first }}">
-	<h2>{{ category | first }}</h2>
-	</span>{{ category | last | size }}</span>
-	<ul class="arc-list">
-    	{% for post in category.last %}
-        	<li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
-    	{% endfor %}
-	</ul>
-</div>
-{% endfor %}
