@@ -20,14 +20,24 @@ function getRequest()
 var request = getRequest();
 var curTag = request["cat"];
 
-console.log(curTag);
+window.onload = function () {
+	var aDiv = document.getElementsByTagName("div");
+	for (var i = 0; i < aDiv.length; i++)
+	{
+		if (aDiv[i].className != curTag)
+			aDiv.style.display = "none";
+	}
+};
+
 </script>
 {% for category in site.categories %}
-<h2>{{ category | first }}</h2>
-</span>{{ category | last | size }}</span>
-<ul class="arc-list">
-    {% for post in category.last %}
-        <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-</ul>
+<div class="{{ category | first }}">
+	<h2>{{ category | first }}</h2>
+	</span>{{ category | last | size }}</span>
+	<ul class="arc-list">
+    	{% for post in category.last %}
+        	<li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+    	{% endfor %}
+	</ul>
+</div>
 {% endfor %}
