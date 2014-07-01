@@ -16,7 +16,7 @@
 		<h3>
 			<a href="http://mycmessia.github.io">Home</a>
 			{% for category in site.categories %}
-			<a>{{ category }}</a>
+			<a>{{ category | first }}</a>
 			{% endfor %}
 		</h3>
 	</header>
