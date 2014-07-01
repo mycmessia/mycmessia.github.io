@@ -19,17 +19,15 @@ function getRequest()
 
 var request = getRequest();
 var curTag = request["cat"];
-
-window.onload = function () {
 	
-	var oDiv = document.getElementById("main_content");
-	var aDiv = oDiv.getElementsByTagName("div");
-	for (var i = 0; i < aDiv.length; i++)
-	{
-		if (aDiv[i].getAttribute("type") == "content_list" && aDiv[i].className != curTag)
-			aDiv[i].style.display = "none";
-	}
-};
+var oDiv = document.getElementById("main_content");
+var aDiv = oDiv.getElementsByTagName("div");
+for (var i = 0; i < aDiv.length; i++)
+{
+	if (aDiv[i].getAttribute("type") == "content_list" && aDiv[i].className != curTag)
+		aDiv[i].style.display = "none";
+}
+
 
 </script>
 {% for category in site.categories %}
