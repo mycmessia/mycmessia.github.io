@@ -295,7 +295,7 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 50px 10px 0 10px;
+  padding: 50px 10px 10px 10px;
 }
 
 #project_title {
@@ -360,7 +360,7 @@ Full-Width Styles
 }
 
 #main_content {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 #footer_wrap {
