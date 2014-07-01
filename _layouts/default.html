@@ -15,8 +15,9 @@
 		<h2 id="project_tagline">I am a coder in China, skilled in C&nbsp;language,&nbsp;JavaScript,&nbsp;HTML,&nbsp;CSS,&nbsp;cocos2d-x...</h2>
 		<h3>
 			<a href="http://mycmessia.github.io">Home</a>
-			<a>Works</a>
-			<a>Contact</a>
+			{% for category in site.categories %}
+			<a>{{ category }}</a>
+			{% endfor %}
 		</h3>
 	</header>
 	</div>
