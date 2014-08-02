@@ -1,0 +1,28 @@
+---
+layout: default
+title: Use loop run Action in cocos2dx
+categories: cocos2dx
+tags: cocos2dx
+---
+
+<h2>{{ page.title }}</h2>
+<p>
+	If you want to use loop run many actions and clean them up in the
+	last loop, or you want to call a function at the end in cocos2dx,
+	you can try the code, instead of closure for the reason that the
+	closure will make your code more complex.
+	<pre class = "javascript">
+		var action = xxx;
+		var sprite = xxx;
+
+		for (var i = 0; i < n; i++)
+		{
+			if (i == n - 1)
+			{
+			}
+			else
+			{
+			}
+		}
+	</pre>
+</p>
