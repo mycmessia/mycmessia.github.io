@@ -15,13 +15,27 @@ tags: cocos2dx
 		var action = xxx;
 		var sprite = xxx;
 
+		var seq = null;
 		for (var i = 0; i < n; i++)
 		{
+			var delay = cc.DelayTime.create(i * 0.5);
 			if (i == n - 1)
 			{
+				//add a callback
+				seq = cc.Sequence.create(
+					delay,
+					action,
+					cc.CallFunc.create(function () {
+						//what you want to do at the end
+					});
+				);
 			}
 			else
 			{
+				seq = cc.Sequence.create(
+					cc.DelayTime.create(i * 0.5),
+					action
+				);
 			}
 		}
 	</pre>
