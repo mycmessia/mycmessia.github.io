@@ -1,0 +1,9 @@
+header.inner h3 a {margin-right: 20px;}
+
+span.date {float: right;}
+
+div.pagination {padding: 20px 0; text-align: center;}
+div.pagination span.previous {float: left;}
+div.pagination span.next a.next {float: right;}
+
+#disqus_thread {margin-top: 30px;}
