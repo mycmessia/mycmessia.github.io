@@ -1,7 +1,9 @@
 /* 
- * create a blog template to write blog 
+ * create a blog template to write blog,
+ * with command node ./create.js title category tags.
+ * Your pwd must in this folder.
  * args[0] title
- * args[1] categories
+ * args[1] category
  * args[2] tags
  */
 var tools = require("./tools.js");
@@ -14,6 +16,7 @@ var categories = args[1];
 var tags = args[2];
 
 var oDate = new Date;
+
 var ws = fs.createWriteStream("../_posts/" + 
 				oDate.getFullYear() + "-" +
 				tools.toDou((oDate.getMonth() + 1)) + "-" + 
